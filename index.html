@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How well do you know Muhsin?</title>
+  <!-- simple font: Poppins or fallback to Arial -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- style.css will be linked, but we also put some basic reset inline for clarity -->
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <main class="quiz-container">
+    <!-- WELCOME SECTION -->
+    <section id="welcome-section" class="card">
+      <h1>How Well Do You Know Muhsin?</h1>
+      <p class="description">
+        This is a small quiz I made for my friends.<br>
+        Let’s see how well you really know me.
+      </p>
+      <div class="input-group">
+        <label for="username">Enter your name <span class="light">(you can also stay anonymous)</span></label>
+        <input type="text" id="username" placeholder="e.g. mimi" maxlength="30">
+      </div>
+      <button id="start-btn" class="btn red-btn">Start Quiz</button>
+    </section>
+
+    <!-- QUIZ SECTION (hidden initially) -->
+    <section id="quiz-section" class="card hidden">
+      <div id="quiz-header">
+        <h2>Muhsin quiz</h2>
+        <p id="display-name"></p>
+      </div>
+      <form id="quiz-form">
+        <!-- JS will inject 10 questions here -->
+      </form>
+      <button id="submit-quiz" class="btn red-btn">Submit answers</button>
+    </section>
+
+    <!-- RESULT SECTION (hidden initially) -->
+    <section id="result-section" class="card hidden">
+      <h2>Your score</h2>
+      <div id="score-display" class="score-big"></div>
+      <p id="feedback-message" class="feedback"></p>
+
+      <!-- message box for Muhsin -->
+      <div class="input-group">
+        <label for="user-message">Leave Muhsin a message or advice</label>
+        <textarea id="user-message" rows="3" placeholder="Type something..."></textarea>
+      </div>
+
+      <!-- whatsapp send button -->
+      <button id="send-whatsapp" class="btn red-btn">Send Result via WhatsApp</button>
+      <button id="restart-btn" class="btn ghost-btn">↺ take again</button>
+    </section>
+  </main>
+
+  <!-- link to external script (defer) -->
+  <script src="script.js" defer></script>
+</body>
+</html>
